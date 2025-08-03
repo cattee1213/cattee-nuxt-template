@@ -5,7 +5,7 @@ const { data: page } = await useAsyncData(() => {
   return queryCollection('content').path('/').first();
 });
 
-const response: CustomResponse<string> = await useEncryptedFetch().get('/data');
+const response: CustomResponse<string> = await useEncryptedFetch().get('/user/data');
 </script>
 
 <template>
