@@ -9,7 +9,7 @@ export default defineWrappedResponseHandler(async (event) => {
   // return response;
 
   return {
-    data: 'This is a test response about the user data',
+    data: 'This is a test response from the server',
     success: true,
     result: 0,
     text: 'Request was successful'

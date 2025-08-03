@@ -9,7 +9,7 @@ const response: CustomResponse<string> = await useEncryptedFetch().get('/user/da
 </script>
 
 <template>
-  <div class="h-screen w-screen bg-gray-800 text-slate-400 flex flex-col items-center justify-center gap-4">
+  <div class="h-screen w-screen flex flex-col items-center justify-center gap-4">
     <p class="text-2xl">This is a paragraph</p>
 
     <Icon class="w-10 h-10" name="uil:github" />
@@ -19,6 +19,8 @@ const response: CustomResponse<string> = await useEncryptedFetch().get('/user/da
     <p>pointer:{{ x }}, {{ y }}</p>
     <p>fetch data: {{ response.data }}</p>
     <ContentRenderer v-if="page" :value="page" />
+
+    <v-btn>This is a vuetify button</v-btn>
   </div>
 </template>
 

@@ -21,10 +21,11 @@ export default defineNuxtConfig({
     pageTransition: true
   },
   typescript: {
+    strict: true,
     typeCheck: true
   },
   pages: {
-    pattern: ['**/*.vue', '!**/_*']
+    pattern: ['**/*.vue', '!**/_*', '!**/*.spec.*']
   },
   components: [
     {
@@ -43,6 +44,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxt/icon',
-    '@nuxt/content'
+    '@nuxt/content',
+    'vuetify-nuxt-module'
   ]
 });
