@@ -4,6 +4,8 @@ const { x, y } = useMouse();
 const { data: page } = await useAsyncData(() => {
   return queryCollection('content').path('/').first();
 });
+
+const response: CustomResponse<string> = await useEncryptedFetch().get('/data');
 </script>
 
 <template>
@@ -15,6 +17,7 @@ const { data: page } = await useAsyncData(() => {
     <nuxt-img src="https://picsum.photos/200" />
 
     <p>pointer:{{ x }}, {{ y }}</p>
+    <p>fetch data: {{ response.data }}</p>
     <ContentRenderer v-if="page" :value="page" />
   </div>
 </template>
