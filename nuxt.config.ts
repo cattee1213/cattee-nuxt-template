@@ -18,7 +18,8 @@ export default defineNuxtConfig({
     baseURL: import.meta.env.NUXT_APP_BASE_URL,
     // 缓存路由
     keepalive: true,
-    pageTransition: true
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' }
   },
   typescript: {
     strict: true,
@@ -46,5 +47,10 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/content',
     'vuetify-nuxt-module'
+  ],
+  // css
+  css: [
+    '@/assets/styles/variables.scss',
+    '@/assets/styles/global.scss' // 引入全局样式
   ]
 });

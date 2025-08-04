@@ -6,6 +6,11 @@ const { data: page } = await useAsyncData(() => {
 });
 
 const response: CustomResponse<string> = await useEncryptedFetch().get('/user/data');
+
+function clickHandle() {
+  console.log('Button clicked!');
+  useRouter().push('/dashborad/console1');
+}
 </script>
 
 <template>
@@ -20,7 +25,7 @@ const response: CustomResponse<string> = await useEncryptedFetch().get('/user/da
     <p>fetch data: {{ response.data }}</p>
     <ContentRenderer v-if="page" :value="page" />
 
-    <v-btn>This is a vuetify button</v-btn>
+    <v-btn @click="clickHandle">This is a vuetify button</v-btn>
   </div>
 </template>
 
