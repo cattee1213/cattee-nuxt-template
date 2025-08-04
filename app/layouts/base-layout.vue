@@ -36,7 +36,7 @@ function menuClickHandle(item: MenuItem) {
     </v-navigation-drawer>
 
     <v-main class="flex items-center justify-center h-[calc(100vh-64px)]">
-      <v-container class="h-full">
+      <v-container class="h-full overflow-y-auto">
         <slot />
       </v-container>
     </v-main>
