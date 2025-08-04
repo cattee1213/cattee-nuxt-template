@@ -24,10 +24,10 @@ function menuClickHandle(item: MenuItem) {
 </script>
 
 <template>
-  <v-layout class="rounded-md border h-screen">
+  <v-layout height="100vh">
     <v-app-bar title="Application bar" />
 
-    <v-navigation-drawer class="h-[calc(100vh-64px)]">
+    <v-navigation-drawer>
       <v-list nav :items="items">
         <v-list-item v-for="(item, i) in items" :key="i" :value="item" @click="menuClickHandle(item)">
           <v-list-item-title>{{ item.title }}</v-list-item-title>
@@ -35,8 +35,8 @@ function menuClickHandle(item: MenuItem) {
       </v-list>
     </v-navigation-drawer>
 
-    <v-main class="flex items-center justify-center h-[calc(100vh-64px)]">
-      <v-container class="h-full overflow-y-auto">
+    <v-main>
+      <v-container height="100%" class="bg-gray-100 overflow-y-auto">
         <slot />
       </v-container>
     </v-main>
